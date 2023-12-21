@@ -1,0 +1,14 @@
+{
+  "payload": {
+    "firstname": "Aaron",
+    "lastname": "Ramsey",
+    "totalprice": 150,
+    "depositpaid": true,
+    "bookingdates": {
+      "checkin": "2023-08-01",
+      "checkout": "2023-08-02"
+    },
+    "additionalneeds": "Queen Bed"
+  },
+  "bookingId": 3479
+}
