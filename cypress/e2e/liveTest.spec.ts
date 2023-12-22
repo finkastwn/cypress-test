@@ -1,12 +1,14 @@
+import { assertUrl } from '../support/helper'
+
 describe('launch primaku', () => {
     it('launch primaku', () => {
         cy.visit('https://primaku.com')
-        cy.helper.assertUrl("home")
+        assertUrl("home")
         cy.get('title').should('have.text','PrimaKu - Pelopor Aplikasi Tumbuh Kembang Anak di Indonesia')
         
         // cy.get('.hidden > :nth-child(3) > a > .font-medium').click()
         cy.get('a').contains("Tentang Kami").click()
-        cy.helper.assertUrl("about")
+        assertUrl("about")
         cy.get('title').should('have.text','PrimaKu - Pelopor Aplikasi Tumbuh Kembang Anak di Indonesia')
 
         let textP1 = "PT Cipta Medika Informasi (PrimaKu), sebuah aplikasi yang memantau kesehatan anak, bekerja sama eksklusif dengan Ikatan Dokter Anak Indonesia (IDAI). Melalui aplikasi ini, orangtua bisa mendapatkan informasi tentang tumbuh kembang dan kesehatan anak dengan mudah dan cepat."
@@ -20,6 +22,6 @@ describe('launch primaku', () => {
         }
         cy.go('back')
         cy.url().should('not.include','primaku.com/about')
-        cy.helper.assertUrl("home")
+        assertUrl("home")
     });
 })

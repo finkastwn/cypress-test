@@ -2,6 +2,6 @@
 Automation website and API test using cypress
 
 # How to run your first test
-1. After clone, run npm install
-2. Run whole script using ```npx cypress run```
-3. Run cypress open using ```npx cypress open```
+1. After clone, run pnpm install
+2. Run whole script using ```pnpm cy:run```
+3. Run cypress open using ```pnpm cy:open```
