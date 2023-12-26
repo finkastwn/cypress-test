@@ -5,3 +5,5 @@ Automation website and API test using cypress
 1. After clone, run pnpm install
 2. Run whole script using ```pnpm cy:run```
 3. Run cypress open using ```pnpm cy:open```
+
+Test Push
