@@ -7,3 +7,5 @@ Automation website and API test using cypress
 3. Run cypress open using ```pnpm cy:open```
 
 Test Push
+
+Copyright stwn
