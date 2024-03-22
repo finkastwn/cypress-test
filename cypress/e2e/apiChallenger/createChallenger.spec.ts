@@ -1,5 +1,8 @@
 // # Resource: https://apichallenges.herokuapp.com/gui/challenges
+const dataTest = `cypress/fixtures/example.json`;
+
 const baseUrl = 'https://apichallenges.herokuapp.com/';
+
 let challengeCode: string;
 
 describe('Create Challenger', () => {
@@ -16,7 +19,10 @@ describe('Create Challenger', () => {
         }).then((response: any) => {
             expect(response.status).to.eq(201);
             challengeCode = response.headers['x-challenger'];
-            cy.log(challengeCode)
+            cy.readFile(dataTest).then((data) => {
+                data.xChallenger = challengeCode
+                cy.writeFile(dataTest, data)
+            })
         })
     });
 });
